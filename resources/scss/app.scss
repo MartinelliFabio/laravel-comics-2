@@ -7,8 +7,60 @@ body {
 }
 
 .home {
-    height: 400px;
+    height: 100%;
+
+    .comics {
+        .img-comics:nth-last-child(2) {
+            opacity: 0.4;
+        }
+
+        .img-comics:nth-last-child(3) {
+            opacity: 0.7;
+        }
+
+        .img-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .shadow {
+            position: absolute;
+            z-index: 99;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-image:
+                    radial-gradient(at 50% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+                    radial-gradient(at 25% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+                    radial-gradient(at 0% 100%, hsla(28, 0%, 0%, 1) 0px, transparent 35%),
+                    radial-gradient(at 75% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+                    radial-gradient(at 100% 100%, hsla(189, 0%, 0%, 1) 0px, transparent 35%);
+        }
+
+        .link-comics {
+            text-decoration: none;
+            position: absolute;
+            bottom: 0;
+            z-index: 9999;
+            padding: 15px 25px;
+            background-color: $bluelink;
+            text-transform: uppercase;
+            color: $whitetext;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s all;
+
+            &:hover {
+                background-color: $bluetext;
+            }
+        }
+    }
 }
+
+
 
 .f-size {
     font-size: 11px;
@@ -52,16 +104,16 @@ img {
     position: relative;
 
     span {
-            position: absolute;
-            top: -37px;
-            left: 16%;
-            padding: 20px 30px;
-            background-color: $bluelink;
-            text-transform: uppercase;
-            color: $whitetext;
-            font-weight: bold;
-            font-size: 25px;
-        }
+        position: absolute;
+        top: -37px;
+        left: 16%;
+        padding: 20px 30px;
+        background-color: $bluelink;
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+    }
    
     .container-comics {
         padding-top: 3.5rem;
@@ -276,7 +328,7 @@ footer {
     }
 }
 
-h1 {
+h1, h5 {
     color: $bluetext;
     font-size: 32px;
     font-weight: bold;

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\ComicsController;
+use App\Http\Controllers\Guest\PageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,27 +16,21 @@ use App\Http\Controllers\Guest\ComicsController;
 |
 */
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::get('characters',[ PageController::class, 'characters'])->name('characters');
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+
+Route::get('/',[ PageController::class, 'home'])->name('home');
+
 
 Route::resource('comics', ComicsController::class);
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+Route::get('movies',[ PageController::class, 'movies'])->name('movies');
 
-Route::get('/tv', function () {
-    return view('tv');
-})->name('tv');
 
-Route::get('/games', function () {
-    return view('games');
-})->name('games');
+Route::get('tv',[ PageController::class, 'tv'])->name('tv');
+
+
+Route::get('games',[ PageController::class, 'games'])->name('games');
 
 Route::get('/collectibles', function () {
     return view('collectibles');

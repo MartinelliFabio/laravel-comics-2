@@ -50,7 +50,6 @@ body {
             color: $whitetext;
             font-weight: bold;
             font-size: 20px;
-            cursor: pointer;
             transition: 0.3s all;
 
             &:hover {
@@ -113,6 +112,24 @@ img {
         color: $whitetext;
         font-weight: bold;
         font-size: 25px;
+    }
+
+    .upload {
+        text-decoration: none;
+        position: absolute;
+        top: -37px;
+        right: 16%;
+        padding: 20px 30px;
+        background-color: $bluelink;
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+        
+            &:hover {
+                background-color: $bluetext;
+            }
     }
    
     .container-comics {
@@ -397,6 +414,36 @@ h1, h5 {
     color: $textgray;
 }
 
+.my-form {
+    background-color: $bgblack;
+    color: $whitetext;
+    margin: 50px 0;
+    border-radius: 3rem;
+    padding: 3rem 10rem;
+
+    h1 {
+        color: $bluelink;
+    }
+
+    * {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .my-btn {
+        background-color: $bluelink;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        color: $whitetext;
+        border: 0;
+        transition: 0.3s all;
+
+            &:hover {
+                background-color: $bluetext;
+            }
+    }
+}
 
 
 

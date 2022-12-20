@@ -5,6 +5,7 @@
 @section('content')
     <div class="main">
         <span>current series</span>
+        <a href="{{route('comics.create')}}" class="upload">Carica il tuo Comic</a>
         <div class="container container-comics">
             <div class="comics-main">
                 <div class="row d-flex flex-wrap">

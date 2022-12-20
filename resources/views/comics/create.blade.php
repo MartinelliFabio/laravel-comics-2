@@ -4,57 +4,42 @@
 
 @section('content')
     <section class="container my-5">
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.store') }}" method="POST" class="my-form">
         @csrf
-
+            <h1 class="text-center fs-1">Aggiungi il tuo Comic</h1>
             <div>
                 <label for="title">Titolo</label>
                 <input type="text" name="title" id="title">
             </div>
-
             <div>
-                <label for="description">Descrizione</label>
-                <input type="text" name="description" id="description">
+                <label for="price">Prezzo $</label>
+                <input type="text" name="price" id="price" placeholder="25.99">
             </div>
-
             <div>
-                <label for="thumb">Thumb</label>
-                <input type="text" name="thumb" id="thumb">
-            </div>
-
-            <div>
-                <label for="price">Prezzo</label>
-                <input type="text" name="price" id="price">
-            </div>
-
-            <div>
-                <label for="series">Serie</label>
+                <label for="series">Series</label>
                 <input type="text" name="series" id="series">
             </div>
-
             <div>
-                <label for="sale_date">Data di uscita</label>
-                <input type="text" name="sale_date" id="sale_date">
+                <label for="sale_date">Data di Uscita</label>
+                <input type="date" name="sale_date" id="sale_date">
             </div>
-
             <div>
                 <label for="type">Tipo</label>
-                <input type="text" name="type" id="type">
+                <input type="text" name="type" id="type" placeholder="es. comic book">
             </div>
-
             <div>
-                <label for="artists">Artista</label>
-                <input type="text" name="artists" id="artists">
+                <label for="artists">Artisti</label>
+                <input type="text" name="artists" id="artists" placeholder="Artista1, Artista2,...">
             </div>
-
             <div>
-                <label for="writers">Scrittore</label>
-                <input type="text" name="writers" id="writers">
+                <label for="writers">Scrittori</label>
+                <input type="text" name="writers" id="writers" placeholder="Scrittore1, Scrittore2,...">
             </div>
-
             <div>
-                <input type="submit" value="Invia">
+                <label for="description">Descrizione</label>
+                <textarea name="description" id="description" rows="4"></textarea>
             </div>
+            <button type="submit" class="my-btn text-uppercase fw-bold">Invia</button>
         </form>
 
     </section>

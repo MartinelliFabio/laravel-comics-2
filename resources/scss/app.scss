@@ -6,6 +6,10 @@ body {
     font-family: sans-serif;
 }
 
+.home {
+    height: 400px;
+}
+
 .f-size {
     font-size: 11px;
 }
@@ -13,7 +17,7 @@ body {
 header {
     height: 120px;
 
-    .links {
+    .links a {
         text-decoration: none;
         color: $blacktext;
         height: 40px;

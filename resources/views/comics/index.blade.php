@@ -11,7 +11,7 @@
                     @foreach ($comics as $key => $comic)
                     <div class="my-card">
                         <div class="img-box">
-                            <a href="{{'/single-page' . $key}}">
+                            <a href="{{route('comics.show' , $key + 1)}}">
                                 <img src="{{$comic['thumb']}}" alt="">
                             </a>
                         </div>

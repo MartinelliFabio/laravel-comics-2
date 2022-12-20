@@ -13,15 +13,15 @@
 <header class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
         <div class="logo">
-            <a href="#">
+            <a href="{{route('home')}}">
                 <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
             </a>
         </div>
         <nav class="navbar-nav container navbar-light">
             <ul class="d-flex list-unstyled justify-content-end gap-5 text-uppercase fw-bold m-0">
                 @foreach ($links as $link)
-                    <li class="nav-item">
-                        <a class="links {{(Route::currentRouteName() == $link['url'] || (Route::currentRouteName() == 'single-page' && $link['url'] == 'comics'))  ? 'active' : ''}}"  href="{{$link['url'] == 'comics' ? '/' : $link['url']}}">{{$link['text']}}</a>
+                    <li class="nav-item links">
+                        <a class="{{(Route::currentRouteName() == $link['url'] || (Route::currentRouteName() == 'single-page' && $link['url'] == 'comics'))  ? 'active' : ''}}"  href="{{route($link['url'])}}">{{$link['text']}}</a>
                     </li>
                 @endforeach
             </ul>

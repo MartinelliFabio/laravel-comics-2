@@ -14,7 +14,7 @@ class PageController extends Controller
     }
 
     public function home() {
-        $comics = Comic::all();
+        $comics = config('db_seeder.comics');
         return view('home', compact('comics'));   
     }
 

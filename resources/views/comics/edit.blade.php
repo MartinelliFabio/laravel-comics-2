@@ -4,6 +4,7 @@
 
 @section('content')
     <section class="container my-5">
+        <a href="{{route('comics.show', $comic->id)}}" class="indietro"><i class="fa-solid fa-circle-left"></i> Torna indietro</a>
         <form action="{{ route('comics.update', $comic->id)  }}" method="POST" class="my-form">
         @csrf
         @method('PUT')

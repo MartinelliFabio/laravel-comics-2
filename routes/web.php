@@ -18,14 +18,11 @@ use App\Http\Controllers\Guest\PageController;
 
 Route::get('characters',[ PageController::class, 'characters'])->name('characters');
 
-
 Route::get('/',[ PageController::class, 'home'])->name('home');
-
 
 Route::resource('comics', ComicsController::class);
 
 Route::get('movies',[ PageController::class, 'movies'])->name('movies');
-
 
 Route::get('tv',[ PageController::class, 'tv'])->name('tv');
 

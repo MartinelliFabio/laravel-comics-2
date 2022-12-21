@@ -3,6 +3,11 @@
 return [
     'navbar' => [
         [
+            "text"=> "home",
+            "url"=> "home",
+            "active"=> false,
+        ],
+        [
             "text"=> "characters",
             "url"=> "characters",
             "active"=> false,

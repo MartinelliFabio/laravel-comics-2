@@ -9,10 +9,10 @@
         <div class="container container-comics">
             <div class="comics-main">
                 <div class="row d-flex flex-wrap">
-                    @foreach ($comics as $key => $comic)
+                    @foreach ($comics as $comic)
                     <div class="my-card">
                         <div class="img-box">
-                            <a href="{{route('comics.show' , $key + 1)}}">
+                            <a href="{{route('comics.show', $comic->id)}}">
                                 <img src="{{$comic['thumb']}}" alt="">
                             </a>
                         </div>

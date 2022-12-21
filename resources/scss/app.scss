@@ -355,6 +355,48 @@ h1, h5 {
     font-weight: bold;
 }
 
+.box-modifica {
+    top:500px;
+    right: 18%;
+
+    .modifica {
+        text-decoration: none;
+        padding: 20px 30px;
+        background-color: $blue-single;
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $bluetitle;
+        }
+    }
+}
+
+.box-cancella{
+    top: 484px;
+    right: 29%;
+
+    .btn-cancella {
+        border: 0;
+        padding: 15px 25px;
+        background-color: $blue-single;
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $bluetitle;
+        } 
+    }
+}
+
+
+
 .container-available {
     background-color: $green-bg;
     font-weight: bold;

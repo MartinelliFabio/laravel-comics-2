@@ -12,6 +12,14 @@
             <img src="{{$comic->thumb}}" alt="" class="img-single">
             <span class="view text-center">view gallery</span>
         </div>
+        <div class="position-absolute box-modifica">
+            <a href="{{route('comics.edit', $comic->id)}}" class="modifica">Modifica</a>
+        </div>
+        <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="position-absolute box-cancella">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn-cancella">Cancella</button>
+        </form>
     </div>
 </div>
 
